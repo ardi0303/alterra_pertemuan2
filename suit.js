@@ -5,6 +5,8 @@ const kertas = document.getElementById("kertas");
 const computer = document.getElementById("computer");
 const hasil = document.getElementById("hasil");
 
+const scoreDisplay = document.getElementById("scoreDisplay");
+
 var comp = ["batu", "kertas", "gunting"];
 
 function mathRandom() {
@@ -29,6 +31,7 @@ if (gunting.addEventListener("click", function () {
     } else {
         hasil.innerHTML = "Kamu menang";
     }
+    calculateScore(hasil.innerHTML);
 }));
 
 if (batu.addEventListener("click", function () {
@@ -40,6 +43,7 @@ if (batu.addEventListener("click", function () {
     } else {
         hasil.innerHTML = "Kamu menang";
     }
+    calculateScore(hasil.innerHTML);
 }));
 
 if (kertas.addEventListener("click", function () {
@@ -51,4 +55,21 @@ if (kertas.addEventListener("click", function () {
     } else {
         hasil.innerHTML = "Kamu menang";
     }
+    calculateScore(hasil.innerHTML);
 }));
+
+
+var score = 0;
+
+function updateScore() {
+    scoreDisplay.innerHTML = "Score: " + score;
+}
+
+function calculateScore(outcome) {
+    if (outcome === "Kamu menang") {
+        score += 1;
+    } else if (outcome === "Kamu kalah") {
+        score -= 1;
+    }
+    updateScore();
+}

@@ -5,22 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
     
-    <title>Document</title>
+    <title>SUIT GAME</title>
 </head>
-<body>
+<body class="bg-emerald-500 py-10">
     <div class="flex justify-center">
-        <h1 class="text-2xl">SUIT GAME</h1>
+        <h1 class="text-2xl bg-lime-300 px-5 py-5 rounded-lg font-bold">SUIT GAME</h1>
     </div>
-    <div class="flex justify-center">
-        <button class="rounded-full bg-zinc-800 h-56 w-56 text-white" id="computer"></button>
+    <div class="pl-48 font-bold">
+        <h2 id="scoreDisplay">Score: </h2>
     </div>
-    <div class="flex justify-center">
-        <button class="rounded-full bg-zinc-800 h-56 w-56 text-white" id="hasil"></button>
+    <div class="flex justify-center pt-4">
+        <button class="rounded-full bg-zinc-800 h-28 w-28 text-white cursor-default" id="computer">Comp.</button>
     </div>
-    <div class="flex justify-center gap-4">
-        <button class="rounded-full bg-zinc-800 h-56 w-56 text-white" id="gunting">Gunting</button>
-        <button class="rounded-full bg-zinc-800 h-56 w-56 text-white" id="batu">Batu</button>
-        <button class="rounded-full bg-zinc-800 h-56 w-56 text-white" id="kertas">Kertas</button>
+    <div class="flex justify-center pt-4">
+        <button class="rounded-full bg-zinc-800 h-28 w-28 text-white cursor-default" id="hasil">VS</button>
+    </div>
+    <div class="flex justify-center gap-4 pt-4">
+        <button class="transition ease-in-out delay-150 rounded-full bg-zinc-800 hover:-translate-y-1 hover:scale-10 hover:bg-zinc-700 duration-300 h-28 w-28 text-white" id="gunting">Gunting</button>
+        <button class="transition ease-in-out delay-150 rounded-full bg-zinc-800 hover:-translate-y-1 hover:scale-10 hover:bg-zinc-700 duration-300 h-28 w-28 text-white" id="batu">Batu</button>
+        <button class="transition ease-in-out delay-150 rounded-full bg-zinc-800 hover:-translate-y-1 hover:scale-10 hover:bg-zinc-700 duration-300 h-28 w-28 text-white" id="kertas">Kertas</button>
     </div>
     <script src="suit.js"></script>
 </body>
